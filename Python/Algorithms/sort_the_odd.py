@@ -9,19 +9,19 @@ Link:https://www.codewars.com/kata/578aa45ee9fd15ff4600090d/train/python
 """
 
 
-# def sort_array(source_array):
-#     odd_numbers = sorted([num for num in source_array if num % 2 != 0])
-#     odd_index = 0
-#     res = []
-#     for num in source_array:
-#         if num % 2 != 0:
-#             res.append(odd_numbers[odd_index])
-#             odd_index += 1
-#         else:
-#             res.append(num)
-#     return res
+def sort_array(source_array):
+    odd_numbers = sorted([num for num in source_array if num % 2 != 0])
+    odd_index = 0
+    res = []
+    for num in source_array:
+        if num % 2 != 0:
+            res.append(odd_numbers[odd_index])
+            odd_index += 1
+        else:
+            res.append(num)
+    return res
 
-
+# Smarter Solve
 def sort_array(source_array):
     odd_numbers = sorted(
         [num for num in source_array if num % 2 != 0], reverse=True)
