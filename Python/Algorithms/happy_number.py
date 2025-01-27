@@ -44,3 +44,19 @@ def is_happy(n, k):
 
 print(is_happy(42, 2))  # Output: [42, 20, 4, 16, 37, 58, 89, 145, 42]
 print(is_happy(7, 2))   # Output: [1]
+
+
+def is_happy_2(n):
+    def get_next(number):
+        return sum(int(digit) ** 2 for digit in str(number))
+
+    seen = set()  # To track numbers we've already seen (to detect cycles)
+
+    while n != 1 and n not in seen:
+        seen.add(n)
+        n = get_next(n)
+
+    return n == 1
+
+
+is_happy_2(91)

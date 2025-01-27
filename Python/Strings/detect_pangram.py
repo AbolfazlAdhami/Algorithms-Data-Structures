@@ -7,6 +7,17 @@ Link: https://www.codewars.com/kata/545cedaa9943f7fe7b000048/train/python
     """
 
 
+def is_pangram(str):
+    dic = {}
+    for char in str.lower():
+        if char.isalpha():
+            if char in dic:
+                dic[char] += 1
+            else:
+                dic[char] = 1
+    return dic.__len__() == 26
+
+# Smart Way
 def is_pangram(st):
     sentens = set(st.lower())
     count = 0
@@ -16,7 +27,7 @@ def is_pangram(st):
     return count == 26
 
 
-print(is_pangram("The quick brown fox jumps over the lazy dog"))
-print(is_pangram("This isn't a pangram!"))
-print(is_pangram("abcdefghijklm opqrstuvwxyz"))
-print(is_pangram("ABCD45EFGH,IJK,LMNOPQR56STUVW3XYZ"))
+print(is_pangram("The quick brown fox jumps over the lazy dog"))  # True
+print(is_pangram("This isn't a pangram!"))  # False
+print(is_pangram("abcdefghijklm opqrstuvwxyz"))  # Flase
+print(is_pangram("ABCD45EFGH,IJK,LMNOPQR56STUVW3XYZ"))  # True
