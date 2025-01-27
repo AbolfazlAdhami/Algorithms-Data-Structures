@@ -7,15 +7,17 @@ def green(n: int) -> int:
         if (current ** 2) % modulus == current:
             dp.append(current)
         current += 1
+    print(dp)
     return dp[n - 1]
 
 
 print(green(4))
 print(green(12))
-print(green(13))
-print(green(100))
+# print(green(13))
+# print(green(100))
 
-"""This is a very simply formulated task. Let's call an integer number N 'green' if N² ends with all of the digits of N. Some examples:
+"""
+This is a very simply formulated task. Let's call an integer number N 'green' if N² ends with all of the digits of N. Some examples:
 
 5 is green, because 5² = 25 and 25 ends with 5.
 

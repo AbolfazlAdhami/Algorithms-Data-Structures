@@ -27,3 +27,4 @@ def count_ways(n: int) -> int:
 print(count_ways(1))
 print(count_ways(2))
 print(count_ways(3))
+print(count_ways(100))

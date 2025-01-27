@@ -6,8 +6,6 @@ def longest_slide_down(pyramid):
     return pyramid[0][0]
 
 # Smart Way
-
-
 def longest_slide_down(p):
     res = p.pop()
     while p:
