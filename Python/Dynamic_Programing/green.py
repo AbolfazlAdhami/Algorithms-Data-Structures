@@ -7,7 +7,6 @@ def green(n: int) -> int:
         if (current ** 2) % modulus == current:
             dp.append(current)
         current += 1
-    print(dp)
     return dp[n - 1]
 
 
