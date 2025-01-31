@@ -4,7 +4,7 @@
 Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
 
 Link: https://www.codewars.com/kata/545cedaa9943f7fe7b000048/train/python
-    """
+"""
 
 
 def is_pangram(str):

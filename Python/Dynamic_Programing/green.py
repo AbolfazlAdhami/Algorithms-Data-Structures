@@ -12,8 +12,9 @@ def green(n: int) -> int:
 
 print(green(4))
 print(green(12))
-# print(green(13))
-# print(green(100))
+print(green(13))
+print(green(100))
+
 
 """
 This is a very simply formulated task. Let's call an integer number N 'green' if N² ends with all of the digits of N. Some examples:
