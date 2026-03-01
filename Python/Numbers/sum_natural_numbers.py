@@ -9,11 +9,12 @@ N = int(input())
 print(sum(N))
 
 
+
 def sum_rec(N):
-    s = 1
-    if N >= 2:
-        return N + sum_rec(N-1)
-    return s
+        s = 1
+        if N >= 2:
+            return N + sum_rec(N-1)
+        return s
 
 
 N = int(input())
