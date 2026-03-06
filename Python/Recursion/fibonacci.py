@@ -1,10 +1,9 @@
-def fibonacci_head(n):
-    if n == 0:
-        return 0
-    if n == 1:
+def fibonacci(n):
+    if n == 1 or n == 2:
         return 1
 
-    return fibonacci_head(n-1) + fibonacci_head(n-2)
+    return fibonacci(n-1)+fibonacci(n-2)
 
 
-print(fibonacci_head(23))
+print(fibonacci(23))
+
