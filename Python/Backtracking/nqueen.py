@@ -1,0 +1,60 @@
+class QueensProblem:
+    def __init__(self, n: int) -> None:
+        self.n = n
+        self.chess_table = [[0 for i in range(n)] for j in range(n)]
+
+    def solve_n_queens(self):
+        if self.solve(0):
+            self.print_queens()
+        else:
+            print("There is no solution to the problem...")
+    # col_index in the same as the index of the queen
+
+    def solve(self, col_index):
+        if col_index == self.n:
+            return True
+        for row_index in range(self.n):
+            if self.is_place_valid(row_index, col_index):
+                self.chess_table[row_index][col_index] = 1
+                if self.solve(col_index+1):
+                    return True
+
+                # print("BACKTRACKING...")
+                self.chess_table[row_index][col_index] = 0
+
+        return False
+
+    def is_place_valid(self, row_index, col_index):
+        for i in range(self.n):
+            if self.chess_table[row_index][i] == 1:
+                return False
+        j = col_index
+        for i in range(row_index, -1, -1):
+            if i < 0:
+                break
+            if self.chess_table[i][j] == 1:
+                return False
+            j = j-1
+        j = col_index
+        for i in range(row_index, self.n):
+            if j < 0:
+                break
+            if self.chess_table[i][j] == 1:
+                return False
+            j = j-1
+        return True
+
+    def print_queens(self):
+        for i in range(self.n):
+            for j in range(self.n):
+                if self.chess_table[i][j] == 1:
+                    print(' Q ', end='')
+                else:
+                    print(' - ', end='')
+            print('\n')
+
+
+if __name__ == '__main__':
+    N = int(input())
+    queens = QueensProblem(N)
+    queens.solve_n_queens()
