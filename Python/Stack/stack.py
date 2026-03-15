@@ -1,24 +1,18 @@
-status = True
+class Stack:
+    def __init__(self):
+        self.stack = []
 
+    def push(self, x):
+        self.stack.append(x)
 
-def Stack(cmd, stack):
-    if cmd[0] == 'push':
-        stack.append(cmd[1])
-    elif cmd[0] == 'pop':
-        print("Oops!" if len(stack) == 0 else stack.pop())
-    elif cmd[0] == 'peek':
-        print('None!' if len(stack) == 0 else stack[-1])
-    elif cmd[0] == 'size':
-        print(len(stack))
-    elif cmd[0] == 'empty':
-        print(len(stack) == 0)
-    elif cmd[0] == 'quit':
-        global status
-        status = False
-        return
+    def pop(self):
+        return None if self.empty() else self.stack.pop()
 
+    def peek(self):
+        return None if self.empty() else self.stack[-1]
 
-stack = []
-while status:
-    cmd = input().split()
-    Stack(cmd, stack)
+    def size(self):
+        return len(self.stack)
+
+    def empty(self):
+        return len(self.stack) == 0
