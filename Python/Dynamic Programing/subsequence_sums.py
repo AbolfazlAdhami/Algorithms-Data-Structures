@@ -12,6 +12,7 @@ def subsequence_sums(arr, s):
         else:
             prefix_count[prefix_sum] = 1
     print(prefix_count, prefix_sum)
+    
     return count
 
 
@@ -19,7 +20,7 @@ print(subsequence_sums([1, 2, 3, -3, -2, -1], 0))  # Output: 3
 print(subsequence_sums([1, 5, -2, 4, 0, -7, -3, 6], 4))  # Output: 4
 
 """
-Given a sequence of integers named arr, find the number of continuous subsequences (sublist or subarray) in arr that sum up to s. A continuous subsequence can be defined as a sequence inbetween a start index and stop index (inclusive) of the sequence. For instance, [2, 3, 4] is a continuous subsequence of [1, 2, 3, 4, 5] , but [3, 5] and [4, 1] are not.
+Given a sequence of integers named arr, find the number of continuous subsequences (sublist or sub array) in arr that sum up to s. A continuous subsequence can be defined as a sequence in between a start index and stop index (inclusive) of the sequence. For instance, [2, 3, 4] is a continuous subsequence of [1, 2, 3, 4, 5] , but [3, 5] and [4, 1] are not.
 
 PERFORMANCE REQUIREMENTS
 

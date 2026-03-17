@@ -1,4 +1,4 @@
-def longest_slide_down(pyramid):
+def longest_slide_down(pyramid): # type: ignore
     for row in range(len(pyramid)-2, -1, -1):
         for col in range(len(pyramid[row])):
             pyramid[row][col] += max(pyramid[row+1][col],
