@@ -28,6 +28,6 @@ print(height(7, 20))  # Output: 137979
  Do you see that skyscraper? And can you tell me a maximal floor that if you drop your egg from will not crack it?
  No, - said Eulampy.
  But if you give me N eggs, - says Tempter - I'l tell you an answer.
- Deal - said Eulampy. But I have one requirement before we start this: if I will see more than M falls of egg, my heart will be crushed instead of egg. So you have only M trys to throw eggs. Would you tell me an exact floor with this limitation?
+ Deal - said Eulampy. But I have one requirement before we start this: if I will see more than M falls of egg, my heart will be crushed instead of egg. So you have only M tries to throw eggs. Would you tell me an exact floor with this limitation?
 *Link:https://www.codewars.com/kata/54cb771c9b30e8b5250011d4/python
 """
