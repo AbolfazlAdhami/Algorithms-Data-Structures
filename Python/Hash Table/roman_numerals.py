@@ -1,7 +1,8 @@
 def solve(roman):
         T= { 'M':1000,'D':500,'C':100,'L':50,'X':10,'V':5,'I':1}
         s=0
-        
+        if not roman.isalpha():
+                return "Input is invalid"
         for i in range(len(roman)-1):
                 if T[roman[i]] < T[roman[i+1]]:
                         s -= T[roman[i]]
@@ -12,6 +13,7 @@ def solve(roman):
         
         return s 
 
-N=input()
+
+N = input().upper()
 print(solve(N))
              
